@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="smpackage">
+      <UniqueIdentifier>{890d1549-aa84-486a-aeac-66d31a582cff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{141af82a-3078-4d28-8ec2-a7eef74ce560}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StepMania">
+      <UniqueIdentifier>{4669fce4-371f-42a1-b6ba-952bacce3231}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StepMania\system">
+      <UniqueIdentifier>{6be2b0fe-136a-45c2-b1b5-71fb4d9eca88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StepMania\arch">
+      <UniqueIdentifier>{7c35f262-384d-49cf-9dba-84bac7c51f85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StepMania\arch\Threads">
+      <UniqueIdentifier>{9eb2d396-b22d-46ce-b0d1-a4fb1679113f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StepMania\arch\ArchHooks">
+      <UniqueIdentifier>{40d2eadc-ae05-42ba-bc64-67ad17f508da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StepMania\arch\Dialog">
+      <UniqueIdentifier>{a25c1086-6190-48c4-87e9-2287b3c06460}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rage">
+      <UniqueIdentifier>{76c8365c-f7c7-4e44-bad4-1a74d74322b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rage\Helpers">
+      <UniqueIdentifier>{7f2ae155-006b-490d-936f-457c8e408d8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rage\Helpers\pcre">
+      <UniqueIdentifier>{a2f146da-1eb8-4966-abf6-a93419c2dcd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rage\Helpers\Lua">
+      <UniqueIdentifier>{ad75996e-d1be-49f9-b8e0-8bc061b9f119}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File Types">
+      <UniqueIdentifier>{8dbe0b28-5ff6-4f02-ae40-e15d439bfef8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data Structures">
+      <UniqueIdentifier>{6b23e883-7b7b-4e16-bb03-12011bc33442}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Global Singletons">
+      <UniqueIdentifier>{d0ffa03d-aae2-431c-ae12-4fb1ebe519b9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="smpackage\ChangeGameSettings.cpp">
+      <Filter>smpackage</Filter>
+    </ClCompile>
+    <ClCompile Include="smpackage\CreateLanguageDlg.cpp">
+      <Filter>smpackage</Filter>
+    </ClCompile>
+    <ClCompile Include="smpackage\EditInsallations.cpp">
+      <Filter>smpackage</Filter>
+    </ClCompile>
+    <ClCompile Include="smpackage\EnterComment.cpp">
+      <Filter>smpackage</Filter>
+    </ClCompile>
+    <ClCompile Include="smpackage\EnterName.cpp">
+      <Filter>smpackage</Filter>
+    </ClCompile>
+    <ClCompile Include="smpackage\LanguagesDlg.cpp">
+      <Filter>smpackage</Filter>
+    </ClCompile>
+    <ClCompile Include="smpackage\MainMenuDlg.cpp">
+      <Filter>smpackage</Filter>
+    </ClCompile>
+    <ClCompile Include="smpackage\ShowComment.cpp">
+      <Filter>smpackage</Filter>
+    </ClCompile>
+    <ClCompile Include="smpackage\smpackage.cpp">
+      <Filter>smpackage</Filter>
+    </ClCompile>
+    <ClCompile Include="smpackage\SmpackageExportDlg.cpp">
+      <Filter>smpackage</Filter>
+    </ClCompile>
+    <ClCompile Include="smpackage\SMPackageInstallDlg.cpp">
+      <Filter>smpackage</Filter>
+    </ClCompile>
+    <ClCompile Include="smpackage\SMPackageUtil.cpp">
+      <Filter>smpackage</Filter>
+    </ClCompile>
+    <ClCompile Include="smpackage\TreeCtrlEx.cpp">
+      <Filter>smpackage</Filter>
+    </ClCompile>
+    <ClCompile Include="smpackage\UninstallOld.cpp">
+      <Filter>smpackage</Filter>
+    </ClCompile>
+    <ClCompile Include="global.cpp">
+      <Filter>StepMania</Filter>
+    </ClCompile>
+    <ClCompile Include="SpecialFiles.cpp">
+      <Filter>StepMania</Filter>
+    </ClCompile>
+    <ClCompile Include="archutils\Win32\AppInstance.cpp">
+      <Filter>StepMania\system</Filter>
+    </ClCompile>
+    <ClCompile Include="archutils\Win32\arch_time.cpp">
+      <Filter>StepMania\system</Filter>
+    </ClCompile>
+    <ClCompile Include="archutils\Win32\CommandLine.cpp">
+      <Filter>StepMania\system</Filter>
+    </ClCompile>
+    <ClCompile Include="archutils\Win32\DialogUtil.cpp">
+      <Filter>StepMania\system</Filter>
+    </ClCompile>
+    <ClCompile Include="archutils\Win32\ErrorStrings.cpp">
+      <Filter>StepMania\system</Filter>
+    </ClCompile>
+    <ClCompile Include="archutils\Win32\GotoURL.cpp">
+      <Filter>StepMania\system</Filter>
+    </ClCompile>
+    <ClCompile Include="archutils\Win32\RegistryAccess.cpp">
+      <Filter>StepMania\system</Filter>
+    </ClCompile>
+    <ClCompile Include="archutils\Win32\SpecialDirs.cpp">
+      <Filter>StepMania\system</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\Threads\Threads_Win32.cpp">
+      <Filter>StepMania\arch\Threads</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\ArchHooks\ArchHooks_Win32Static.cpp">
+      <Filter>StepMania\arch\ArchHooks</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\ArchHooks\ArchHooksUtil.cpp">
+      <Filter>StepMania\arch\ArchHooks</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\Dialog\Dialog.cpp">
+      <Filter>StepMania\arch\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\Dialog\DialogDriver.cpp">
+      <Filter>StepMania\arch\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="arch\Dialog\DialogDriver_Win32.cpp">
+      <Filter>StepMania\arch\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="RageException.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageFile.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageFileBasic.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageFileDriver.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageFileDriverDeflate.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageFileDriverDirect.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageFileDriverDirectHelpers.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageFileDriverMemory.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageFileDriverSlice.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageFileDriverTimeout.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageFileDriverZip.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageFileManager.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageLog.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageThreads.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageTimer.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageTypes.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageUtil.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageUtil_FileDB.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="RageUtil_WorkerThread.cpp">
+      <Filter>Rage</Filter>
+    </ClCompile>
+    <ClCompile Include="pcre\get.c">
+      <Filter>Rage\Helpers\pcre</Filter>
+    </ClCompile>
+    <ClCompile Include="pcre\maketables.c">
+      <Filter>Rage\Helpers\pcre</Filter>
+    </ClCompile>
+    <ClCompile Include="pcre\pcre.c">
+      <Filter>Rage\Helpers\pcre</Filter>
+    </ClCompile>
+    <ClCompile Include="pcre\study.c">
+      <Filter>Rage\Helpers\pcre</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\lapi.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\lauxlib.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\lbaselib.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\lcode.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\ldblib.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\ldebug.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\ldo.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\ldump.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\lfunc.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\lgc.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\linit.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\liolib.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\llex.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\lmathlib.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\lmem.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\loadlib.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\lobject.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\lopcodes.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\loslib.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\lparser.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\lstate.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\lstring.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\lstrlib.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\ltable.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\ltablib.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\ltm.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\lundump.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\lvm.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-5.1\src\lzio.c">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="CsvFile.cpp">
+      <Filter>File Types</Filter>
+    </ClCompile>
+    <ClCompile Include="IniFile.cpp">
+      <Filter>File Types</Filter>
+    </ClCompile>
+    <ClCompile Include="XmlFile.cpp">
+      <Filter>File Types</Filter>
+    </ClCompile>
+    <ClCompile Include="XmlFileUtil.cpp">
+      <Filter>File Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Command.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="DateTime.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="EnumHelper.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="FontCharAliases.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalizedString.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaBinding.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaReference.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaManager.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="ThemeManager.cpp">
+      <Filter>Global Singletons</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="smpackage\ChangeGameSettings.h">
+      <Filter>smpackage</Filter>
+    </ClInclude>
+    <ClInclude Include="smpackage\CreateLanguageDlg.h">
+      <Filter>smpackage</Filter>
+    </ClInclude>
+    <ClInclude Include="smpackage\EditInsallations.h">
+      <Filter>smpackage</Filter>
+    </ClInclude>
+    <ClInclude Include="smpackage\EnterComment.h">
+      <Filter>smpackage</Filter>
+    </ClInclude>
+    <ClInclude Include="smpackage\EnterName.h">
+      <Filter>smpackage</Filter>
+    </ClInclude>
+    <ClInclude Include="smpackage\LanguagesDlg.h">
+      <Filter>smpackage</Filter>
+    </ClInclude>
+    <ClInclude Include="smpackage\MainMenuDlg.h">
+      <Filter>smpackage</Filter>
+    </ClInclude>
+    <ClInclude Include="smpackage\ShowComment.h">
+      <Filter>smpackage</Filter>
+    </ClInclude>
+    <ClInclude Include="smpackage\smpackage.h">
+      <Filter>smpackage</Filter>
+    </ClInclude>
+    <ClInclude Include="smpackage\SmpackageExportDlg.h">
+      <Filter>smpackage</Filter>
+    </ClInclude>
+    <ClInclude Include="smpackage\SMPackageInstallDlg.h">
+      <Filter>smpackage</Filter>
+    </ClInclude>
+    <ClInclude Include="smpackage\smpackageUtil.h">
+      <Filter>smpackage</Filter>
+    </ClInclude>
+    <ClInclude Include="smpackage\StdAfx.h">
+      <Filter>smpackage</Filter>
+    </ClInclude>
+    <ClInclude Include="smpackage\TreeCtrlEx.h">
+      <Filter>smpackage</Filter>
+    </ClInclude>
+    <ClInclude Include="smpackage\UninstallOld.h">
+      <Filter>smpackage</Filter>
+    </ClInclude>
+    <ClInclude Include="smpackage\resource.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="global.h">
+      <Filter>StepMania</Filter>
+    </ClInclude>
+    <ClInclude Include="ProductInfo.h">
+      <Filter>StepMania</Filter>
+    </ClInclude>
+    <ClInclude Include="SpecialFiles.h">
+      <Filter>StepMania</Filter>
+    </ClInclude>
+    <ClInclude Include="StdString.h">
+      <Filter>StepMania</Filter>
+    </ClInclude>
+    <ClInclude Include="archutils\Win32\AppInstance.h">
+      <Filter>StepMania\system</Filter>
+    </ClInclude>
+    <ClInclude Include="archutils\Win32\arch_setup.h">
+      <Filter>StepMania\system</Filter>
+    </ClInclude>
+    <ClInclude Include="archutils\Win32\CommandLine.h">
+      <Filter>StepMania\system</Filter>
+    </ClInclude>
+    <ClInclude Include="archutils\Win32\DialogUtil.h">
+      <Filter>StepMania\system</Filter>
+    </ClInclude>
+    <ClInclude Include="archutils\Win32\ErrorStrings.h">
+      <Filter>StepMania\system</Filter>
+    </ClInclude>
+    <ClInclude Include="archutils\Win32\GotoURL.h">
+      <Filter>StepMania\system</Filter>
+    </ClInclude>
+    <ClInclude Include="archutils\Win32\RegistryAccess.h">
+      <Filter>StepMania\system</Filter>
+    </ClInclude>
+    <ClInclude Include="archutils\Win32\SpecialDirs.h">
+      <Filter>StepMania\system</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Threads\Threads.h">
+      <Filter>StepMania\arch\Threads</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Threads\Threads_Win32.h">
+      <Filter>StepMania\arch\Threads</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\ArchHooks\ArchHooks.h">
+      <Filter>StepMania\arch\ArchHooks</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\ArchHooks\ArchHooks_Win32.h">
+      <Filter>StepMania\arch\ArchHooks</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Dialog\Dialog.h">
+      <Filter>StepMania\arch\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Dialog\DialogDriver.h">
+      <Filter>StepMania\arch\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Dialog\DialogDriver_Win32.h">
+      <Filter>StepMania\arch\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="arch\Dialog\Selector_Dialog.h">
+      <Filter>StepMania\arch\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="RageException.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageFile.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageFileBasic.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageFileDriver.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageFileDriverDeflate.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageFileDriverDirect.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageFileDriverDirectHelpers.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageFileDriverMemory.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageFileDriverSlice.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageFileDriverTimeout.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageFileDriverZip.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageFileManager.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageLog.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageThreads.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageTimer.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageTypes.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageUtil.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageUtil_FileDB.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="RageUtil_WorkerThread.h">
+      <Filter>Rage</Filter>
+    </ClInclude>
+    <ClInclude Include="pcre\internal.h">
+      <Filter>Rage\Helpers\pcre</Filter>
+    </ClInclude>
+    <ClInclude Include="pcre\pcre.h">
+      <Filter>Rage\Helpers\pcre</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\lapi.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\lauxlib.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\lcode.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\ldebug.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\ldo.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\lfunc.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\lgc.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\llex.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\llimits.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\lmem.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\lobject.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\lopcodes.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\lparser.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\lstate.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\lstring.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\ltable.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\ltm.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\lua.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\luaconf.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\lualib.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\lundump.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\lvm.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua-5.1\src\lzio.h">
+      <Filter>Rage\Helpers\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="CsvFile.h">
+      <Filter>File Types</Filter>
+    </ClInclude>
+    <ClInclude Include="IniFile.h">
+      <Filter>File Types</Filter>
+    </ClInclude>
+    <ClInclude Include="XmlFile.h">
+      <Filter>File Types</Filter>
+    </ClInclude>
+    <ClInclude Include="XmlFileUtil.h">
+      <Filter>File Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="DateTime.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumHelper.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="FontCharAliases.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalizedString.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaBinding.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaReference.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="ThemeMetric.h">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaManager.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="ThemeManager.h">
+      <Filter>Global Singletons</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\smpackage.ico">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="smpackage.ICO">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="res\StepMania.ICO">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="smpackage\header.bmp" />
+    <Image Include="smpackage\install.bmp" />
+    <Image Include="smpackage\manage.bmp" />
+    <Image Include="smpackage\menu.bmp" />
+    <Image Include="smpackage\smpackage.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="smpackage\smpackage.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

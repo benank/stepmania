@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>smpackage</ProjectName>
+    <ProjectGuid>{67179F21-52DD-42E7-A797-67DBEAF9F4F4}</ProjectGuid>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28127.55</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>../Program\</OutDir>
+    <IntDir>.\Debug-smpackage\</IntDir>
+    <LinkIncremental />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>../Program\</OutDir>
+    <IntDir>.\Release-smpackage\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\../../Program/smpackage.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;lua-5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;DEBUG;_WINDOWS;WINDOWS;SMPACKAGE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <PrecompiledHeaderFile>global.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug-smpackage/smpackage.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../Debug-smpackage/</AssemblerListingLocation>
+      <ObjectFileName>.\../Debug-smpackage/</ObjectFileName>
+      <ProgramDataBaseFileName>.\../Debug-smpackage/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>smpackage\ZipArchive\Debug\ZipArchive.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../Program/tools-debug.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>../Program/smpackage-debug.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\../../Program/smpackage.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;lua-5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;WINDOWS;SMPACKAGE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <PrecompiledHeaderFile>global.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release-smpackage/smpackage.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../Release-smpackage/</AssemblerListingLocation>
+      <ObjectFileName>.\../Release-smpackage/</ObjectFileName>
+      <ProgramDataBaseFileName>.\../Release-smpackage/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat />
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>smpackage\ZipArchive\Release\ZipArchive.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>./../Program/tools.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>../Program/smpackage.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="archutils\Win32\AppInstance.cpp" />
+    <ClCompile Include="archutils\Win32\arch_time.cpp" />
+    <ClCompile Include="archutils\Win32\CommandLine.cpp" />
+    <ClCompile Include="archutils\Win32\DialogUtil.cpp" />
+    <ClCompile Include="archutils\Win32\ErrorStrings.cpp" />
+    <ClCompile Include="archutils\Win32\GotoURL.cpp" />
+    <ClCompile Include="archutils\Win32\RegistryAccess.cpp" />
+    <ClCompile Include="archutils\Win32\SpecialDirs.cpp" />
+    <ClCompile Include="arch\ArchHooks\ArchHooksUtil.cpp" />
+    <ClCompile Include="arch\ArchHooks\ArchHooks_Win32Static.cpp" />
+    <ClCompile Include="arch\Dialog\Dialog.cpp" />
+    <ClCompile Include="arch\Dialog\DialogDriver.cpp" />
+    <ClCompile Include="arch\Dialog\DialogDriver_Win32.cpp" />
+    <ClCompile Include="arch\Threads\Threads_Win32.cpp" />
+    <ClCompile Include="Command.cpp" />
+    <ClCompile Include="CsvFile.cpp" />
+    <ClCompile Include="DateTime.cpp" />
+    <ClCompile Include="EnumHelper.cpp" />
+    <ClCompile Include="FontCharAliases.cpp" />
+    <ClCompile Include="global.cpp" />
+    <ClCompile Include="IniFile.cpp" />
+    <ClCompile Include="LocalizedString.cpp" />
+    <ClCompile Include="lua-5.1\src\lapi.c" />
+    <ClCompile Include="lua-5.1\src\lauxlib.c" />
+    <ClCompile Include="lua-5.1\src\lbaselib.c" />
+    <ClCompile Include="lua-5.1\src\lcode.c" />
+    <ClCompile Include="lua-5.1\src\ldblib.c" />
+    <ClCompile Include="lua-5.1\src\ldebug.c" />
+    <ClCompile Include="lua-5.1\src\ldo.c" />
+    <ClCompile Include="lua-5.1\src\ldump.c" />
+    <ClCompile Include="lua-5.1\src\lfunc.c" />
+    <ClCompile Include="lua-5.1\src\lgc.c" />
+    <ClCompile Include="lua-5.1\src\linit.c" />
+    <ClCompile Include="lua-5.1\src\liolib.c" />
+    <ClCompile Include="lua-5.1\src\llex.c" />
+    <ClCompile Include="lua-5.1\src\lmathlib.c" />
+    <ClCompile Include="lua-5.1\src\lmem.c" />
+    <ClCompile Include="lua-5.1\src\loadlib.c" />
+    <ClCompile Include="lua-5.1\src\lobject.c" />
+    <ClCompile Include="lua-5.1\src\lopcodes.c" />
+    <ClCompile Include="lua-5.1\src\loslib.c" />
+    <ClCompile Include="lua-5.1\src\lparser.c" />
+    <ClCompile Include="lua-5.1\src\lstate.c" />
+    <ClCompile Include="lua-5.1\src\lstring.c" />
+    <ClCompile Include="lua-5.1\src\lstrlib.c" />
+    <ClCompile Include="lua-5.1\src\ltable.c" />
+    <ClCompile Include="lua-5.1\src\ltablib.c" />
+    <ClCompile Include="lua-5.1\src\ltm.c" />
+    <ClCompile Include="lua-5.1\src\lundump.c" />
+    <ClCompile Include="lua-5.1\src\lvm.c" />
+    <ClCompile Include="lua-5.1\src\lzio.c" />
+    <ClCompile Include="LuaBinding.cpp" />
+    <ClCompile Include="LuaManager.cpp" />
+    <ClCompile Include="LuaReference.cpp" />
+    <ClCompile Include="pcre\get.c" />
+    <ClCompile Include="pcre\maketables.c" />
+    <ClCompile Include="pcre\pcre.c" />
+    <ClCompile Include="pcre\study.c" />
+    <ClCompile Include="RageException.cpp" />
+    <ClCompile Include="RageFile.cpp" />
+    <ClCompile Include="RageFileBasic.cpp" />
+    <ClCompile Include="RageFileDriver.cpp" />
+    <ClCompile Include="RageFileDriverDeflate.cpp" />
+    <ClCompile Include="RageFileDriverDirect.cpp" />
+    <ClCompile Include="RageFileDriverDirectHelpers.cpp" />
+    <ClCompile Include="RageFileDriverMemory.cpp" />
+    <ClCompile Include="RageFileDriverSlice.cpp" />
+    <ClCompile Include="RageFileDriverTimeout.cpp" />
+    <ClCompile Include="RageFileDriverZip.cpp" />
+    <ClCompile Include="RageFileManager.cpp" />
+    <ClCompile Include="RageLog.cpp" />
+    <ClCompile Include="RageThreads.cpp" />
+    <ClCompile Include="RageTimer.cpp" />
+    <ClCompile Include="RageTypes.cpp" />
+    <ClCompile Include="RageUtil.cpp" />
+    <ClCompile Include="RageUtil_FileDB.cpp" />
+    <ClCompile Include="RageUtil_WorkerThread.cpp" />
+    <ClCompile Include="smpackage\ChangeGameSettings.cpp" />
+    <ClCompile Include="smpackage\CreateLanguageDlg.cpp" />
+    <ClCompile Include="smpackage\EditInsallations.cpp" />
+    <ClCompile Include="smpackage\EnterComment.cpp" />
+    <ClCompile Include="smpackage\EnterName.cpp" />
+    <ClCompile Include="smpackage\LanguagesDlg.cpp" />
+    <ClCompile Include="smpackage\MainMenuDlg.cpp" />
+    <ClCompile Include="smpackage\ShowComment.cpp" />
+    <ClCompile Include="smpackage\smpackage.cpp" />
+    <ClCompile Include="smpackage\SmpackageExportDlg.cpp" />
+    <ClCompile Include="smpackage\SMPackageInstallDlg.cpp" />
+    <ClCompile Include="smpackage\SMPackageUtil.cpp" />
+    <ClCompile Include="smpackage\TreeCtrlEx.cpp" />
+    <ClCompile Include="smpackage\UninstallOld.cpp" />
+    <ClCompile Include="SpecialFiles.cpp" />
+    <ClCompile Include="ThemeManager.cpp" />
+    <ClCompile Include="XmlFile.cpp" />
+    <ClCompile Include="XmlFileUtil.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="archutils\Win32\AppInstance.h" />
+    <ClInclude Include="archutils\Win32\arch_setup.h" />
+    <ClInclude Include="archutils\Win32\CommandLine.h" />
+    <ClInclude Include="archutils\Win32\DialogUtil.h" />
+    <ClInclude Include="archutils\Win32\ErrorStrings.h" />
+    <ClInclude Include="archutils\Win32\GotoURL.h" />
+    <ClInclude Include="archutils\Win32\RegistryAccess.h" />
+    <ClInclude Include="archutils\Win32\SpecialDirs.h" />
+    <ClInclude Include="arch\ArchHooks\ArchHooks.h" />
+    <ClInclude Include="arch\ArchHooks\ArchHooks_Win32.h" />
+    <ClInclude Include="arch\Dialog\Dialog.h" />
+    <ClInclude Include="arch\Dialog\DialogDriver.h" />
+    <ClInclude Include="arch\Dialog\DialogDriver_Win32.h" />
+    <ClInclude Include="arch\Dialog\Selector_Dialog.h" />
+    <ClInclude Include="arch\Threads\Threads.h" />
+    <ClInclude Include="arch\Threads\Threads_Win32.h" />
+    <ClInclude Include="Command.h" />
+    <ClInclude Include="CsvFile.h" />
+    <ClInclude Include="DateTime.h" />
+    <ClInclude Include="EnumHelper.h" />
+    <ClInclude Include="FontCharAliases.h" />
+    <ClInclude Include="global.h" />
+    <ClInclude Include="IniFile.h" />
+    <ClInclude Include="LocalizedString.h" />
+    <ClInclude Include="lua-5.1\src\lapi.h" />
+    <ClInclude Include="lua-5.1\src\lauxlib.h" />
+    <ClInclude Include="lua-5.1\src\lcode.h" />
+    <ClInclude Include="lua-5.1\src\ldebug.h" />
+    <ClInclude Include="lua-5.1\src\ldo.h" />
+    <ClInclude Include="lua-5.1\src\lfunc.h" />
+    <ClInclude Include="lua-5.1\src\lgc.h" />
+    <ClInclude Include="lua-5.1\src\llex.h" />
+    <ClInclude Include="lua-5.1\src\llimits.h" />
+    <ClInclude Include="lua-5.1\src\lmem.h" />
+    <ClInclude Include="lua-5.1\src\lobject.h" />
+    <ClInclude Include="lua-5.1\src\lopcodes.h" />
+    <ClInclude Include="lua-5.1\src\lparser.h" />
+    <ClInclude Include="lua-5.1\src\lstate.h" />
+    <ClInclude Include="lua-5.1\src\lstring.h" />
+    <ClInclude Include="lua-5.1\src\ltable.h" />
+    <ClInclude Include="lua-5.1\src\ltm.h" />
+    <ClInclude Include="lua-5.1\src\lua.h" />
+    <ClInclude Include="lua-5.1\src\luaconf.h" />
+    <ClInclude Include="lua-5.1\src\lualib.h" />
+    <ClInclude Include="lua-5.1\src\lundump.h" />
+    <ClInclude Include="lua-5.1\src\lvm.h" />
+    <ClInclude Include="lua-5.1\src\lzio.h" />
+    <ClInclude Include="LuaBinding.h" />
+    <ClInclude Include="LuaManager.h" />
+    <ClInclude Include="LuaReference.h" />
+    <ClInclude Include="pcre\internal.h" />
+    <ClInclude Include="pcre\pcre.h" />
+    <ClInclude Include="ProductInfo.h" />
+    <ClInclude Include="RageException.h" />
+    <ClInclude Include="RageFile.h" />
+    <ClInclude Include="RageFileBasic.h" />
+    <ClInclude Include="RageFileDriver.h" />
+    <ClInclude Include="RageFileDriverDeflate.h" />
+    <ClInclude Include="RageFileDriverDirect.h" />
+    <ClInclude Include="RageFileDriverDirectHelpers.h" />
+    <ClInclude Include="RageFileDriverMemory.h" />
+    <ClInclude Include="RageFileDriverSlice.h" />
+    <ClInclude Include="RageFileDriverTimeout.h" />
+    <ClInclude Include="RageFileDriverZip.h" />
+    <ClInclude Include="RageFileManager.h" />
+    <ClInclude Include="RageLog.h" />
+    <ClInclude Include="RageThreads.h" />
+    <ClInclude Include="RageTimer.h" />
+    <ClInclude Include="RageTypes.h" />
+    <ClInclude Include="RageUtil.h" />
+    <ClInclude Include="RageUtil_FileDB.h" />
+    <ClInclude Include="RageUtil_WorkerThread.h" />
+    <ClInclude Include="smpackage\ChangeGameSettings.h" />
+    <ClInclude Include="smpackage\CreateLanguageDlg.h" />
+    <ClInclude Include="smpackage\EditInsallations.h" />
+    <ClInclude Include="smpackage\EnterComment.h" />
+    <ClInclude Include="smpackage\EnterName.h" />
+    <ClInclude Include="smpackage\LanguagesDlg.h" />
+    <ClInclude Include="smpackage\MainMenuDlg.h" />
+    <ClInclude Include="smpackage\resource.h" />
+    <ClInclude Include="smpackage\ShowComment.h" />
+    <ClInclude Include="smpackage\smpackage.h" />
+    <ClInclude Include="smpackage\SmpackageExportDlg.h" />
+    <ClInclude Include="smpackage\SMPackageInstallDlg.h" />
+    <ClInclude Include="smpackage\smpackageUtil.h" />
+    <ClInclude Include="smpackage\StdAfx.h" />
+    <ClInclude Include="smpackage\TreeCtrlEx.h" />
+    <ClInclude Include="smpackage\UninstallOld.h" />
+    <ClInclude Include="SpecialFiles.h" />
+    <ClInclude Include="StdString.h" />
+    <ClInclude Include="ThemeManager.h" />
+    <ClInclude Include="ThemeMetric.h" />
+    <ClInclude Include="XmlFile.h" />
+    <ClInclude Include="XmlFileUtil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\smpackage.ico" />
+    <Image Include="res\StepMania.ICO" />
+    <Image Include="smpackage.ICO" />
+    <Image Include="smpackage\header.bmp" />
+    <Image Include="smpackage\install.bmp" />
+    <Image Include="smpackage\manage.bmp" />
+    <Image Include="smpackage\menu.bmp" />
+    <Image Include="smpackage\smpackage.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="smpackage\smpackage.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="smpackage\smpackage.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

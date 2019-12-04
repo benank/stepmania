@@ -1,11 +1,13 @@
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual C++ Express 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "smpackage", "smpackage-net2008.vcproj", "{67179F21-52DD-42E7-A797-67DBEAF9F4F4}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "smpackage-net2008", "smpackage-net2008.vcxproj", "{67179F21-52DD-42E7-A797-67DBEAF9F4F4}"
 	ProjectSection(ProjectDependencies) = postProject
 		{F8FE2773-87CB-402F-8DC8-A80837C3E24C} = {F8FE2773-87CB-402F-8DC8-A80837C3E24C}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZipArchive", "smpackage\ZipArchive\ZipArchive-net2008.vcproj", "{F8FE2773-87CB-402F-8DC8-A80837C3E24C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZipArchive-net2008", "smpackage\ZipArchive\ZipArchive-net2008.vcxproj", "{F8FE2773-87CB-402F-8DC8-A80837C3E24C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,5 +44,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC0CB88E-0B0B-4CCE-AAD2-FD85CF165C8E}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0f423f44-2bb5-403d-af53-a0584926f198}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4a361dcc-5d94-4a03-84a7-e05987e008b4}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Information">
+      <UniqueIdentifier>{ac7b8c7e-4684-4380-9a57-a1c1f8fcb0ce}</UniqueIdentifier>
+      <Extensions>txt</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipArchive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipAutoBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipCentralDir.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipCompatibility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipException.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipFileHeader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipMemFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipPathComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipPlatform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipPlatformComm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipStorage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipAbstractFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipArchive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipAutoBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipBaseException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipCentralDir.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipCollections.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipCompatibility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipExport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipFileHeader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipFileMapping.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipMemFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipPathComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipPlatform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipStorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipString.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Appnote.txt">
+      <Filter>Information</Filter>
+    </Text>
+    <Text Include="ChangeLog.txt">
+      <Filter>Information</Filter>
+    </Text>
+    <Text Include="faq.txt">
+      <Filter>Information</Filter>
+    </Text>
+    <Text Include="gpl.txt">
+      <Filter>Information</Filter>
+    </Text>
+    <Text Include="License.txt">
+      <Filter>Information</Filter>
+    </Text>
+    <Text Include="Readme.txt">
+      <Filter>Information</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
