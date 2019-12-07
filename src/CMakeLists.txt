@@ -26,6 +26,7 @@ include(CMakeData-gtk.cmake)
 include(CMakeData-file-types.cmake)
 include(CMakeData-globals.cmake)
 include(CMakeData-singletons.cmake)
+include(CMakeData-mixplay.cmake)
 
 list(APPEND SMDATA_ALL_FILES_SRC
             ${SMDATA_GLOBAL_FILES_SRC}
@@ -34,6 +35,7 @@ list(APPEND SMDATA_ALL_FILES_SRC
             ${SMDATA_ALL_ARCH_SRC}
             ${SMDATA_ALL_DATA_SRC}
             ${SMDATA_ALL_RAGE_SRC}
+            ${SMDATA_MIXPLAY_FILES_SRC}
             ${SMDATA_ALL_SCREENS_SRC}
             ${SMDATA_OS_SRC}
             ${SMDATA_FILE_TYPES_SRC})
@@ -44,6 +46,7 @@ list(APPEND SMDATA_ALL_FILES_HPP
             ${SMDATA_ALL_ARCH_HPP}
             ${SMDATA_ALL_DATA_HPP}
             ${SMDATA_ALL_RAGE_HPP}
+            ${SMDATA_MIXPLAY_FILES_HPP}
             ${SMDATA_ALL_SCREENS_HPP}
             ${SMDATA_OS_HPP}
             ${SMDATA_FILE_TYPES_HPP})
@@ -620,9 +623,14 @@ list(APPEND SM_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}
             "${SM_SRC_DIR}/generated")
 list(APPEND SM_INCLUDE_DIRS "${JPEG_INCLUDE_DIR}")
 if(NOT APPLE)
+  if(WITH_INTERACTIVE)
+    list(APPEND SM_INCLUDE_DIRS
+                  "${SM_EXTERN_DIR}/interactive-cpp/include")
+  endif()
   list(APPEND SM_INCLUDE_DIRS
               "${SM_EXTERN_DIR}/glew-1.5.8/include"
               "${SM_EXTERN_DIR}/jsoncpp/include"
+              "${SM_EXTERN_DIR}/interactive-cpp/include"
               "${SM_EXTERN_DIR}/zlib")
   if(MSVC)
     if(WITH_OGG)

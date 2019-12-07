@@ -1,6 +1,7 @@
 include(CMakeProject-lua.cmake)
 include(CMakeProject-glew.cmake)
 include(CMakeProject-json.cmake)
+include(CMakeProject-interactive.cmake)
 include(CMakeProject-mad.cmake)
 include(CMakeProject-zlib.cmake)
 include(CMakeProject-jpeg.cmake)
