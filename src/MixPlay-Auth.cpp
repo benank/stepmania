@@ -1,9 +1,10 @@
+#include "global.h"
 #include "MixPlay-Auth.h"
 
-std::string Auth::authorization;
-std::string Auth::token;
+std::string MixPlayAuth::authorization;
+std::string MixPlayAuth::token;
 
-int Auth::Authorize()
+int MixPlayAuth::Authorize()
 {
 #ifdef MIXER_DEBUG
 	std::cout << "Authorizing...\n";
@@ -41,7 +42,7 @@ int Auth::Authorize()
 	if (err) return err;
 
 	// Set the authorization out parameter.
-	Auth::authorization = std::string(authBuffer, authBufferLength);
+	MixPlayAuth::authorization = std::string(authBuffer, authBufferLength);
 
 #ifdef MIXER_DEBUG
 	std::cout << "Successfully authorized!\n";
@@ -49,7 +50,7 @@ int Auth::Authorize()
 	return 0;
 }
 
-int Auth::ReAuthenticate()
+int MixPlayAuth::ReAuthenticate()
 {
 	int err = 0;
 	char shortCode[7];
@@ -89,7 +90,7 @@ int Auth::ReAuthenticate()
 	return 0;
 }
 
-void Auth::SaveToken(std::string token)
+void MixPlayAuth::SaveToken(std::string token)
 {
 #ifdef MIXER_DEBUG
 	std::cout << "Saving auth token...\n";
@@ -105,7 +106,7 @@ void Auth::SaveToken(std::string token)
 #endif
 }
 
-void Auth::LoadToken()
+void MixPlayAuth::LoadToken()
 {
 #ifdef MIXER_DEBUG
 	std::cout << "Loading auth token...\n";

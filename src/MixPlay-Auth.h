@@ -13,7 +13,9 @@
 #define VERSION_ID "433588"
 #define SHARE_CODE "e2wksr20"
 
-class Auth
+#define MIXER_DEBUG 1
+
+class MixPlayAuth
 {
 public:
 	static int Authorize();

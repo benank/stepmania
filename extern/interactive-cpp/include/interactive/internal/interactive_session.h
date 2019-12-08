@@ -1,5 +1,5 @@
 #pragma once
-#include "interactivity.h"
+#include "../interactivity.h"
 #include "http_client.h"
 #include "websocket.h"
 #include "rapidjson\document.h"

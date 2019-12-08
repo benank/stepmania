@@ -70,6 +70,9 @@
 #include "ActorUtil.h"
 #include "ver.h"
 
+#include "MixPlay-Auth.h"
+#include "MixPlay-Core.h"
+
 #if defined(WIN32)
 #include <windows.h>
 #endif
@@ -1176,6 +1179,14 @@ int sm_main(int argc, char* argv[])
 	SONGMAN->UpdatePreferredSort();
 	NSMAN 		= new NetworkSyncManager( pLoadingWindow );
 	STATSMAN	= new StatsManager;
+
+	// MixPlay interactivity
+	int err = MixPlayAuth::Authorize();
+	if (err) return err;
+
+	err = MixPlayCore::Initialize();
+	if (err) return err;
+
 
 	// Initialize which courses are ranking courses here.
 	SONGMAN->UpdateRankingCourses();

@@ -2,7 +2,7 @@ file(MAKE_DIRECTORY "${SM_SRC_DIR}/generated")
 
 if(MSVC)
   # Add the mapconv program of the past to allow for debugging information.
-  include("CMakeProject-mapconv.cmake")
+  #include("CMakeProject-mapconv.cmake")
   if(WITH_IRC_POST_HOOK)
     include("CMakeProject-irc.cmake")
   endif()
@@ -35,10 +35,10 @@ list(APPEND SMDATA_ALL_FILES_SRC
             ${SMDATA_ALL_ARCH_SRC}
             ${SMDATA_ALL_DATA_SRC}
             ${SMDATA_ALL_RAGE_SRC}
-            ${SMDATA_MIXPLAY_FILES_SRC}
             ${SMDATA_ALL_SCREENS_SRC}
             ${SMDATA_OS_SRC}
-            ${SMDATA_FILE_TYPES_SRC})
+            ${SMDATA_FILE_TYPES_SRC}
+            ${SMDATA_MIXPLAY_FILES_SRC})
 list(APPEND SMDATA_ALL_FILES_HPP
             ${SMDATA_GLOBAL_FILES_HPP}
             ${SMDATA_GLOBAL_SINGLETON_HPP}
@@ -46,10 +46,13 @@ list(APPEND SMDATA_ALL_FILES_HPP
             ${SMDATA_ALL_ARCH_HPP}
             ${SMDATA_ALL_DATA_HPP}
             ${SMDATA_ALL_RAGE_HPP}
-            ${SMDATA_MIXPLAY_FILES_HPP}
             ${SMDATA_ALL_SCREENS_HPP}
             ${SMDATA_OS_HPP}
-            ${SMDATA_FILE_TYPES_HPP})
+            ${SMDATA_FILE_TYPES_HPP}
+            ${SMDATA_MIXPLAY_FILES_HPP})
+
+list(APPEND SMDATA_ALL_FILES_SRC "${SM_EXTERN_DIR}/interactive-cpp/include/interactive/interactivity.cpp")
+list(APPEND SMDATA_ALL_FILES_HPP "${SM_EXTERN_DIR}/interactive-cpp/include/interactive/interactivity.h")
 
 if(NOT APPLE)
   list(APPEND SMDATA_ALL_FILES_SRC "Main.cpp")
@@ -201,16 +204,16 @@ if(WIN32)
                                    RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO
                                    "${SM_PROGRAM_DIR}")
 
-  if(MSVC)
-    # Allow for getting a virtualdub stack trace.
-    add_custom_command(
-      TARGET "${SM_EXE_NAME}" POST_BUILD
-      COMMAND
-        "mapconv"
-        "${SM_PROGRAM_DIR}/$<$<CONFIG:DEBUG>:${SM_NAME_DEBUG}>$<$<CONFIG:MINSIZEREL>:${SM_NAME_MINSIZEREL}>$<$<CONFIG:RELWITHDEBINFO>:${SM_NAME_RELWITHDEBINFO}>$<$<CONFIG:RELEASE>:${SM_NAME_RELEASE}>.map"
-        "${SM_PROGRAM_DIR}/$<$<CONFIG:DEBUG>:${SM_NAME_DEBUG}>$<$<CONFIG:MINSIZEREL>:${SM_NAME_MINSIZEREL}>$<$<CONFIG:RELWITHDEBINFO>:${SM_NAME_RELWITHDEBINFO}>$<$<CONFIG:RELEASE>:${SM_NAME_RELEASE}>.vdi"
-      COMMENT "Generating file to allow for easier stack traces.")
-  endif()
+  #if(MSVC)
+  #  # Allow for getting a virtualdub stack trace.
+  #  add_custom_command(
+  #    TARGET "${SM_EXE_NAME}" POST_BUILD
+  #    COMMAND
+  #      "mapconv"
+  #      "${SM_PROGRAM_DIR}/$<$<CONFIG:DEBUG>:${SM_NAME_DEBUG}>$<$<CONFIG:MINSIZEREL>:${SM_NAME_MINSIZEREL}>$<$<CONFIG:RELWITHDEBINFO>:${SM_NAME_RELWITHDEBINFO}>$<$<CONFIG:RELEASE>:${SM_NAME_RELEASE}>.map"
+  #      "${SM_PROGRAM_DIR}/$<$<CONFIG:DEBUG>:${SM_NAME_DEBUG}>$<$<CONFIG:MINSIZEREL>:${SM_NAME_MINSIZEREL}>$<$<CONFIG:RELWITHDEBINFO>:${SM_NAME_RELWITHDEBINFO}>$<$<CONFIG:RELEASE>:${SM_NAME_RELEASE}>.vdi"
+  #    COMMENT "Generating file to allow for easier stack traces.")
+  #endif()
 elseif(APPLE)
   sm_add_compile_definition("${SM_EXE_NAME}" BACKTRACE_METHOD_X86_DARWIN)
   sm_add_compile_definition("${SM_EXE_NAME}" MACOSX)
@@ -622,15 +625,11 @@ target_link_libraries("${SM_EXE_NAME}" ${SMDATA_LINK_LIB})
 list(APPEND SM_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}
             "${SM_SRC_DIR}/generated")
 list(APPEND SM_INCLUDE_DIRS "${JPEG_INCLUDE_DIR}")
+list(APPEND SM_INCLUDE_DIRS "${SM_EXTERN_DIR}/interactive-cpp/include")
 if(NOT APPLE)
-  if(WITH_INTERACTIVE)
-    list(APPEND SM_INCLUDE_DIRS
-                  "${SM_EXTERN_DIR}/interactive-cpp/include")
-  endif()
   list(APPEND SM_INCLUDE_DIRS
               "${SM_EXTERN_DIR}/glew-1.5.8/include"
               "${SM_EXTERN_DIR}/jsoncpp/include"
-              "${SM_EXTERN_DIR}/interactive-cpp/include"
               "${SM_EXTERN_DIR}/zlib")
   if(MSVC)
     if(WITH_OGG)
