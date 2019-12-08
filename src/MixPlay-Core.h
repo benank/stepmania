@@ -1,6 +1,6 @@
 #include "global.h"
 #pragma once
-#include "interactive/interactivity.h"
+#include "MixPlay-Globals.h"
 #include "MixPlay-Auth.h"
 #include "interactive/internal/rapidjson/Document.h"
 

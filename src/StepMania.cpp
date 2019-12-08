@@ -70,7 +70,6 @@
 #include "ActorUtil.h"
 #include "ver.h"
 
-#include "MixPlay-Auth.h"
 #include "MixPlay-Core.h"
 
 #if defined(WIN32)
@@ -1181,11 +1180,7 @@ int sm_main(int argc, char* argv[])
 	STATSMAN	= new StatsManager;
 
 	// MixPlay interactivity
-	int err = MixPlayAuth::Authorize();
-	if (err) return err;
-
-	err = MixPlayCore::Initialize();
-	if (err) return err;
+	MixPlayCore::Initialize();
 
 
 	// Initialize which courses are ranking courses here.

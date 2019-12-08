@@ -7,15 +7,20 @@ std::map<std::string, std::string> MixPlayCore::controlsByTransaction;
 
 int MixPlayCore::Initialize()
 {
+	MixPlayGlobals::Initialize();
+	
+	err = MixPlayAuth::Authorize();
+	if (err) std::cerr << err << std::endl;
+
 	err = open_session();
-	if (err) return err;
+	if (err) std::cerr << err << std::endl;
 
 	err = set_handlers();
-	if (err) return err;
+	if (err) std::cerr << err << std::endl;
 
 	// Asynchronously connect to the user's interactive channel, using the interactive project specified by the version ID.
 	err = interactive_connect(session, MixPlayAuth::GetAuthorization().c_str(), VERSION_ID, SHARE_CODE, false);
-	if (err) return err;
+	if (err) std::cerr << err << std::endl;
 
 	return err;
 }
@@ -175,19 +180,19 @@ void MixPlayCore::handle_error(void * context, interactive_session session, int 
 int MixPlayCore::set_handlers()
 {
 	err = set_error_handler();
-	if (err) return err;
+	if (err) std::cerr << err << std::endl;
 
 	err = set_input_handler();
-	if (err) return err;
+	if (err) std::cerr << err << std::endl;
 
 	err = set_transaction_complete_handler();
-	if (err) return err;
+	if (err) std::cerr << err << std::endl;
 
 	err = set_state_changed_handler();
-	if (err) return err;
+	if (err) std::cerr << err << std::endl;
 
 	err = set_participants_changed_handler();
-	if (err) return err;
+	if (err) std::cerr << err << std::endl;
 
 	return 0;
 }

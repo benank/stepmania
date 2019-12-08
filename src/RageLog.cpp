@@ -200,10 +200,10 @@ void RageLog::Trace( const char *fmt, ... )
 {
 	va_list	va;
 	va_start( va, fmt );
-	RString sBuff = vssprintf( fmt, va );
+	//RString sBuff = vssprintf( fmt, va );
 	va_end( va );
 
-	Write( 0, sBuff );
+	//Write( 0, sBuff );
 }
 
 /* Use this for more important information; it'll always be included
@@ -212,20 +212,20 @@ void RageLog::Info( const char *fmt, ... )
 {
 	va_list	va;
 	va_start( va, fmt );
-	RString sBuff = vssprintf( fmt, va );
+	//RString sBuff = vssprintf( fmt, va );
 	va_end( va );
 
-	Write( WRITE_TO_INFO, sBuff );
+	//Write( WRITE_TO_INFO, sBuff );
 }
 
 void RageLog::Warn( const char *fmt, ... )
 {
 	va_list	va;
 	va_start( va, fmt );
-	RString sBuff = vssprintf( fmt, va );
+	//RString sBuff = vssprintf( fmt, va );
 	va_end( va );
 
-	Write( WRITE_TO_INFO | WRITE_LOUD, sBuff );
+	//Write( WRITE_TO_INFO | WRITE_LOUD, sBuff );
 }
 
 void RageLog::Time(const char *fmt, ...)
@@ -242,13 +242,13 @@ void RageLog::UserLog( const RString &sType, const RString &sElement, const char
 {
 	va_list va;
 	va_start( va, fmt );
-	RString sBuf = vssprintf( fmt, va );
+	//RString sBuf = vssprintf( fmt, va );
 	va_end( va );
 	
-	if( !sType.empty() )
-		sBuf = ssprintf( "%s \"%s\" %s", sType.c_str(), sElement.c_str(), sBuf.c_str() );
+	//if( !sType.empty() )
+	//	sBuf = ssprintf( "%s \"%s\" %s", sType.c_str(), sElement.c_str(), sBuf.c_str() );
 	
-	Write( WRITE_TO_USER_LOG, sBuf );
+	//Write( WRITE_TO_USER_LOG, sBuf );
 }
 
 void RageLog::Write( int where, const RString &sLine )
