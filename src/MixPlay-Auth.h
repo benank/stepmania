@@ -19,6 +19,7 @@ private:
 	static std::string token;
 
 	static int ReAuthenticate();
+	static int ParseToken(std::string token, std::string& tokenOut);
 	static void SaveToken(std::string token);
 	static void LoadToken();
 };

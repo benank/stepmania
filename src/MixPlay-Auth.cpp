@@ -36,13 +36,7 @@ int MixPlayAuth::Authorize()
 	}
 
 	// Extract the authorization header from the refresh token.
-	char authBuffer[1024];
-	size_t authBufferLength = _countof(authBuffer);
-	err = interactive_auth_parse_refresh_token(token.c_str(), authBuffer, &authBufferLength);
-	if (err) return err;
-
-	// Set the authorization out parameter.
-	MixPlayAuth::authorization = std::string(authBuffer, authBufferLength);
+	ParseToken(MixPlayAuth::token, MixPlayAuth::authorization);
 
 #ifdef MIXER_DEBUG
 	std::cout << "Successfully authorized!\n";
@@ -86,6 +80,19 @@ int MixPlayAuth::ReAuthenticate()
 
 	token = std::string(refreshTokenBuffer, refreshTokenLength);
 	SaveToken(token);
+
+	return 0;
+}
+
+int MixPlayAuth::ParseToken(std::string token, std::string& tokenOut)
+{
+	char authBuffer[1024];
+	size_t authBufferLength = _countof(authBuffer);
+	int err = interactive_auth_parse_refresh_token(token.c_str(), authBuffer, &authBufferLength);
+	if (err) return err;
+
+	// Set the authorization out parameter.
+	tokenOut = std::string(authBuffer, authBufferLength);
 
 	return 0;
 }

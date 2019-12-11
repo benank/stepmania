@@ -22,6 +22,8 @@ int MixPlayCore::Initialize()
 	err = interactive_connect(session, MixPlayAuth::GetAuthorization().c_str(), VERSION_ID, SHARE_CODE, false);
 	if (err) std::cerr << err << std::endl;
 
+	MixPlayCore::Run();
+
 	return err;
 }
 

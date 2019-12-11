@@ -189,3 +189,5 @@ BuildLog.htm
 *.pc
 *.d
 .vscode/
+
+token.dat
